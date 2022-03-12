@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+@import '../../scss/variables';
+
+.homebtn {
+  cursor: pointer;
+  background-color: $primary-color;
+  color: white;
+  padding: 15px;
+  border: none;
+  box-shadow: 0 0 5px $primary-color;
+}
+.a-title {
+  font-size: 10rem;
+  text-align: center;
+}
+.a-message {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.o-cat {
+  width: 35vh;
+  margin: auto;
+  padding: 3rem;
+}
+.m-ear,
+.m-eye {
+  background-color: $secondary-color;
+}
+.m-ears {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 1vh 0.5vh;
+  z-index: 1;
+}
+.m-ear {
+  height: 14vh;
+  width: 10vh;
+  border-radius: 40% 70% 10% 10% e('/') 100% 100% 10% 10%;
+  position: relative;
+
+  &.-left {
+    transform: rotateZ(15deg);
+  }
+  &.-right {
+    transform: rotateY(180deg) rotateZ(15deg);
+  }
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: $primary-color;
+    bottom: 0;
+    right: 70%;
+    border-radius: 50%;
+  }
+  &:after {
+    height: 40%;
+    transform: rotate(15deg);
+  }
+  &:before {
+    height: 35%;
+    transform: rotate(-15deg);
+  }
+}
+.m-face {
+  position: relative;
+  background-color: $primary-color;
+  border-radius: 100% 100% 0 0;
+  margin: -8vh auto 0;
+  padding: 8vh 0 6vh;
+  width: 90%;
+}
+.m-eyes {
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.m-eye {
+  width: 10vh;
+  height: 8vh;
+  border-radius: 70%;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: 50%;
+    left: -2vh;
+    right: -2vh;
+    background-color: $primary-color;
+    border-radius: 0 0 35% 35%;
+    z-index: 2;
+    animation: eyes 5s ease infinite;
+  }
+  &:after {
+    content: '';
+    width: 10%;
+    height: 15%;
+    border-radius: 50%;
+    background-color: $secondary-color;
+    position: absolute;
+    top: 40%;
+  }
+  &.-left:after {
+    right: -5%;
+  }
+  &.-right:after {
+    left: -5%;
+  }
+}
+.a-eyePupil {
+  background-color: $primary-color;
+  width: 30%;
+  left: 35%;
+  &,
+  &:after {
+    position: absolute;
+
+    height: 50%;
+    border-radius: 50%;
+    top: 25%;
+  }
+
+  &:after {
+    content: '';
+    background-color: $secondary-color;
+    width: 20%;
+    left: 20%;
+  }
+}
+
+.m-nose {
+  border-radius: 50% 50% 50% 50% e('/') 30% 30% 70% 70%;
+  background-color: $secondary-color;
+  width: 4vh;
+  height: 2vh;
+  margin: auto;
+}
+
+@keyframes eyes {
+  0%,
+  5%,
+  100% {
+    height: 50%;
+  }
+  2% {
+    height: 110%;
+  }
+}

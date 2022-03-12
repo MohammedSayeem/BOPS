@@ -1,0 +1,62 @@
+// $primary-gradient: radial-gradient(
+//   circle,
+//   hsla(169, 50%, 55%, 1) 0%,
+//   hsla(172, 57%, 41%, 1) 100%
+// );
+// $primary-gradient: radial-gradient(
+//   circle,
+//   hsla(340, 82%, 52%, 1) 0%,
+//   hsla(339, 100%, 48%, 1) 100%
+// );
+// $primary-gradient: linear-gradient(
+//   0deg,
+//   hsla(174, 100%, 29%, 1) 0%,
+//   hsla(174, 100%, 27%, 1) 100%
+// );
+// $primary-gradient: linear-gradient(to right, #141e30, #243b55);
+// $primary-gradient: linear-gradient(
+//   109.6deg,
+//   rgba(0, 191, 165, 1) 11.2%,
+//   rgba(0, 140, 122, 1) 100.2%
+// );
+$primary-gradient: linear-gradient(0deg, #522db8 0%, #1c7ce0 100%);
+$primary-gradient: linear-gradient(
+  90deg,
+  hsla(311, 44%, 29%, 1) 0%,
+  hsla(335, 41%, 50%, 1) 100%
+);
+
+// colors
+
+// $primary-color: #1d212d;
+// $primary-color: #f50057;
+// $primary-color: #008a7c;
+// $primary-color: #141e30;
+// $primary-color: #232526;
+// $primary-color: rgba(0, 140, 122, 1);
+$primary-color: #522db8;
+$primary-color: hsla(311, 44%, 29%, 1);
+
+$primary-color-transparent: rgba(29, 33, 45, 0.9);
+$secondary-color: #f2f5fa;
+// $secondary-color: #fff8f5;
+// $ternary-color: lighten($primary-color, 70%);
+
+@mixin submitbtnstyles {
+  max-width: 97%;
+  min-width: 95%;
+  margin: 0 auto;
+  //   margin-left: 5px;
+  background-color: white;
+  color: $primary-color;
+  padding: 15px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}

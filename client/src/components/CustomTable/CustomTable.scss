@@ -1,0 +1,34 @@
+@import '../../scss/variables';
+
+.custom-table-container {
+  height: 100%;
+  overflow-x: auto;
+
+  table {
+    box-shadow: 1px 1px 5px rgba($color: #777, $alpha: 0.5);
+    border: 0.1px solid rgba(#777, 0.2);
+    padding: 15px;
+    width: 90%;
+    margin: 50px auto;
+    max-height: 100%;
+
+    thead {
+      background-color: $primary-color;
+      color: white;
+    }
+    background-color: white;
+    tr {
+      // font-size: 2rem;
+      padding: 15px 0;
+      min-height: 50px;
+      &:nth-child(even) {
+        background-color: $primary-color;
+        color: white;
+      }
+
+      td {
+        padding: 5px 15px;
+      }
+    }
+  }
+}

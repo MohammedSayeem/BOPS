@@ -1,0 +1,31 @@
+html {
+  font-size: 10px;
+}
+body {
+  margin: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background: #f7d9c4;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: hsla(311, 44%, 29%, 1);
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: hsla(335, 41%, 50%, 1);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

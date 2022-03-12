@@ -1,0 +1,35 @@
+@import '../../scss/variables';
+
+.products-list-container {
+  width: 100%;
+  color: $secondary-color;
+  height: 100%;
+  padding: 10px 30px;
+  overflow: auto;
+
+  li {
+    max-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    margin: 5px auto;
+    padding: 10px;
+    color: $primary-color;
+    border-bottom: 1px solid $primary-color;
+
+    .image-container {
+      max-width: 230px;
+    }
+    span {
+      flex: 2;
+      align-self: center;
+
+      &#edit-btn {
+        text-decoration: underline;
+        font-size: 1.8rem;
+        cursor: pointer;
+        font-weight: bold;
+      }
+    }
+  }
+}

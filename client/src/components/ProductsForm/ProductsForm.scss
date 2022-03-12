@@ -1,0 +1,88 @@
+@import '../../scss/variables';
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 310px;
+  padding: 10px 0;
+  margin: 15px auto;
+  background-color: white;
+  text-align: left;
+  min-height: max-content;
+  max-height: max-content;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba($primary-color, 0.5);
+
+  #back-btn {
+    width: 120px;
+    background-color: $primary-color;
+    color: white;
+    justify-self: flex-start;
+    outline: none;
+    border: none;
+    margin-left: 5px;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  input[type='submit'] {
+    @include submitbtnstyles;
+  }
+  #add-btn {
+    color: white;
+    background-color: $primary-color;
+  }
+
+  .products-form#products-form {
+    min-height: 100%;
+    padding: 0;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+
+    label {
+      color: $primary-color;
+    }
+
+    .input-container {
+      flex: 1;
+    }
+    .image-container {
+      img.form-image {
+        display: block;
+        margin: 10px auto;
+
+        width: 75%;
+        height: 50%;
+      }
+    }
+
+    .custom-input-field {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 5px;
+
+      .image-input {
+        background-color: $primary-color;
+        padding: 10px;
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+      }
+      input {
+        width: 100%;
+        padding: 5px;
+        margin-top: 5px;
+        border: 1px solid;
+        border-radius: 5px;
+      }
+    }
+    input[type='file'] {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import '../../scss/variables';
+
+@mixin shrinkLabel {
+  top: -1px;
+  font-size: 16px;
+  color: white;
+}
+
+.custom-input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  text-align: left;
+
+  .custom-input-label {
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 7px;
+    top: 25px;
+    transition: 300ms ease all;
+    color: grey;
+
+    &.shrink {
+      @include shrinkLabel();
+    }
+  }
+  .custom-input {
+    margin: 25px 5px;
+    padding: 5px;
+    border: none;
+    // width: 100%;
+    border-radius: 5px;
+
+    &:focus {
+      outline: none;
+    }
+    &:focus ~ .custom-input-label {
+      @include shrinkLabel();
+    }
+  }
+}

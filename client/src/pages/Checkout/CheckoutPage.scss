@@ -1,0 +1,165 @@
+@import '../../scss/variables';
+.checkout-page {
+  margin: 50px auto;
+  display: grid;
+  width: 80vw;
+  height: 80vh;
+  box-shadow: 0 0 2px #222;
+  background-color: white;
+  grid-template-columns: 2fr 4fr 1.5fr;
+  animation: slide-in-left 0.5s ease-in;
+  .shipping {
+    box-shadow: 0 0 2px #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    .details {
+      border-top: 1px solid #777;
+      text-align: left;
+      display: flex;
+      font-weight: 600;
+      flex-direction: column;
+      padding: 15px;
+
+      span {
+        display: flex;
+        justify-content: space-between;
+      }
+      button {
+        padding: 10px 15px;
+        background-color: $primary-color;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .cart-items {
+    box-shadow: 0 0px 1px #222;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      //   display: none;
+      color: #222;
+      width: 2px;
+    }
+    &::-webkit-scrollbar-thumb {
+      color: white;
+      background-color: #222;
+    }
+    ul {
+      list-style: none;
+      li {
+        padding: 0 5px;
+        margin: 5px auto;
+        box-shadow: 1px 1px 5px rgba($color: #000000, $alpha: 0.5);
+        border-radius: 5px;
+        display: grid;
+
+        grid-template-columns: 3fr 9fr;
+        grid-template-rows: 60px;
+        width: 90%;
+        align-items: center;
+        justify-content: space-between;
+        img {
+          object-fit: contain;
+          height: 90%;
+          width: 100%;
+        }
+        span {
+          flex: 6;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .checkout-form-container {
+    // Change color here. C'mon, try it!
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 25px 0;
+    .checkout-form {
+      align-items: flex-start;
+    }
+    #address {
+      outline: none;
+      border: 2px solid $primary-color;
+      resize: none;
+      width: 300px;
+      font-size: 1.6rem;
+      border-radius: 5px;
+    }
+    .input-container {
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    label {
+      display: flex;
+      cursor: pointer;
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 0.375em;
+      /* Accessible outline */
+      /* Remove comment to use */
+      /*
+          &:focus-within {
+              outline: .125em solid $primary-color;
+            }
+            */
+      input {
+        position: absolute;
+        left: -9999px;
+        &:checked + span {
+          background-color: mix(#fff, $primary-color, 84%);
+          &:before {
+            box-shadow: inset 0 0 0 0.4375em $primary-color;
+          }
+        }
+      }
+      span {
+        display: flex;
+        align-items: center;
+        padding: 0.375em 0.75em 0.375em 0.375em;
+        border-radius: 99em; // or something higher...
+        transition: 0.25s ease;
+        &:hover {
+          background-color: mix(#fff, $primary-color, 84%);
+        }
+        &:before {
+          display: flex;
+          flex-shrink: 0;
+          content: '';
+          background-color: #fff;
+          width: 1.5em;
+          height: 1.5em;
+          border-radius: 50%;
+          margin-right: 0.375em;
+          transition: 0.25s ease;
+          box-shadow: inset 0 0 0 0.125em $primary-color;
+        }
+      }
+    }
+
+    // Codepen spesific styling - only to center the elements in the pen preview and viewport
+  }
+  @keyframes slide-in-left {
+    from {
+      transform: translateX(-500px);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    margin: 10px auto;
+    width: 95vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    .cart-items {
+      min-height: 20vw;
+    }
+  }
+}

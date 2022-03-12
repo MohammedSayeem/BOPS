@@ -1,0 +1,108 @@
+@import '../../scss/variables';
+
+.header {
+  max-width: 95vw;
+  margin: 5px auto;
+  padding: 4px 10px;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  box-shadow: 1px 1px 5px rgba($color: #777, $alpha: 0.3);
+  border: 0.1px solid rgba(#777, 0.2);
+  z-index: 20;
+
+  // .wave {
+  //   width: 100vw;
+  //   height: 20vh;
+  //   z-index: -5;
+  // }
+  // border-radius: 3px;
+  background-color: white;
+  .logo-container {
+    color: $primary-color;
+    font-family: cursive;
+    cursor: pointer;
+    height: 100%;
+    width: 90px;
+    display: flex;
+    align-items: center;
+  }
+  .nav-items {
+    display: flex;
+
+    .nav-item {
+      padding: 0 5px;
+    }
+    .cart-container {
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      #cart-count {
+        position: absolute;
+        // right: 20px;
+        text-align: center;
+        bottom: 15px;
+        transition: transform 0.3s ease-in;
+        font-size: 1.5rem;
+        color: $primary-color;
+        // font-weight: bold;
+      }
+      .cart-icon {
+        fill: $primary-color;
+      }
+
+      &:hover {
+        .cart-icon {
+          fill: darken($color: $primary-color, $amount: 25%);
+        }
+        #cart-count {
+          color: darken($color: $primary-color, $amount: 25%);
+          transform: scale(1.1);
+        }
+      }
+    }
+    .nav-btn {
+      padding: 0px 10px;
+      font-size: 1.2rem;
+      margin: 0 5px;
+      background-color: $primary-color;
+      border: none;
+      // border-radius: 5px;
+      cursor: pointer;
+      color: white;
+      &:hover {
+        background-color: darken($color: $primary-color, $amount: 5%);
+      }
+    }
+    .search-box-container {
+      max-width: 30vw;
+      border: 3px $primary-color solid;
+      // border-radius: 5px;
+      display: flex;
+      margin: auto;
+      padding: 5px 10px;
+
+      &:hover {
+        border-color: darken($color: $primary-color, $amount: 25%);
+
+        i {
+          color: darken($color: $primary-color, $amount: 25%);
+        }
+      }
+      i {
+        padding-top: 3px;
+        color: $primary-color;
+      }
+      #search-box {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 1px 5px;
+        // font-size: 0.9rem;
+      }
+    }
+  }
+}

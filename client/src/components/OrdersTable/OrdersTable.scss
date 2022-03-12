@@ -1,0 +1,51 @@
+@import '../../scss/variables';
+
+.orders-table-container {
+  padding: 10px;
+  width: 95%;
+  margin: auto;
+  .refresh-btn {
+    cursor: pointer;
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  .orders-table {
+    border-collapse: collapse;
+    border-radius: 50px;
+    width: 100%;
+    th,
+    td {
+      padding: 10px 5px;
+    }
+    .table-header {
+      background-color: whitesmoke;
+      color: $primary-color;
+    }
+
+    tbody {
+      tr:nth-child(odd) {
+        background-color: white;
+        // color: $primary-color;
+        border: 0.1px solid rgba($color: #777, $alpha: 0.2);
+        border-left: none;
+        border-right: none;
+      }
+
+      #status {
+        border: none;
+        outline: none;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: white;
+
+        option {
+          background-color: $primary-color;
+          color: white;
+          padding: 15px;
+        }
+      }
+    }
+  }
+}
